@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{%load crispy_forms_tags %}
+{% block content %}
+
+<section id="best-selling" class="leaf-pattern-overlay">
+		<div class="corner-pattern-overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center">
+                <form method="post">{% csrf_token%}
+                <input type="text" placeholder="Username" name="user1" required><br>
+                <input type="password" placeholder="Password" name="password" required><br>
+                <button type="submit">LOGIN</button>
+            </form>
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                {{message}}
+                </div>
+                {% endfor %}
+            <div class="links">
+<!--                <a href="#">Forgot Username / Password?</a>-->
+                <a href="">Don't have an account? Sign up</a>
+			</div>
+            </div>
+		</div>
+	</section>
+{% endblock %}

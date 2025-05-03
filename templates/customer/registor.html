@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{%load crispy_forms_tags %}
+{% block content %}
+
+<section id="best-selling" class="leaf-pattern-overlay">
+		<div class="container">
+			<div class="row justify-content-center">
+                <form method="post">
+					 {% csrf_token %}
+					{{ customer_form }}
+					{{ login_form }}
+
+                <button type="submit">REGISTOR</button>
+            	</form>
+			</div>
+		</div>
+</section>
+{% endblock %}
