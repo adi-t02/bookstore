@@ -31,4 +31,4 @@ class SellerRegister(forms.ModelForm):
 class ProductsForms(forms.ModelForm):
     class Meta:
         model = Products
-        fields = ('name','category','description','stock','price')
+        fields = ('name','cover','category','author','description','stock','price')

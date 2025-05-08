@@ -7,8 +7,8 @@
 			<div class="row justify-content-center">
                 <form method="post">
 					 {% csrf_token %}
-					{{ customer_form }}
-					{{ login_form }}
+					{{ customer_form|crispy }}
+					{{ login_form|crispy }}
 
                 <button type="submit">REGISTOR</button>
             	</form>

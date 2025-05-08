@@ -37,7 +37,9 @@ class Products(models.Model):
         ('others','others')
     ]
     name = models.CharField(max_length=30)
+    cover = models.ImageField(upload_to='bookcovers/')
     category = models.CharField(max_length=20, choices=STATUS_CHOICES, default='others')
+    author = models.CharField(max_length=100)
     description = models.CharField(max_length=100)
     seller = models.ForeignKey(Seller,on_delete=models.CASCADE)
     stock = models.CharField(max_length=5)

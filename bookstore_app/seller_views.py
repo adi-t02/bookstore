@@ -39,8 +39,9 @@ def seller_delete(request,id):
     return redirect('seller_list')
 
 
-def seller_profile(request,id):
-    data = Seller.objects.get(user_id=id)
+def seller_profile(request):
+    profile_id = request.user
+    data = Seller.objects.get(user=profile_id)
     return render(request, 'seller/profile.html', {'user': data})
 
 
@@ -60,7 +61,7 @@ def product_add(request):
     seller_data = Seller.objects.get(user = user_data)
     form = ProductsForms()
     if request.method == 'POST':
-        form = ProductsForms(request.POST)
+        form = ProductsForms(request.POST,request.FILES)
         if form.is_valid():
             form1 = form.save(commit=False)
             form1.seller = seller_data

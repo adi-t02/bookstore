@@ -41,7 +41,10 @@
         <div class="sidebar-body">
             <ul class="sidebar-body-menu">
                 <li>
-                    <a class="active" href=" {% static '/' %} "><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                    <a href=" {% static '/' %} "><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                </li>
+                <li>
+                    <a  href=" {% url 'products_admin' %} "><span class="icon home" aria-hidden="true"></span>products</a>
                 </li>
                 <li>
                     <a class="show-cat-btn" href=" {% static '##' %} ">

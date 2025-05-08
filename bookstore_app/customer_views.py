@@ -40,8 +40,9 @@ def customer_delete(request,id):
     return redirect('customer_list')
 
 
-def customer_profile(request,id):
-    data = Customer.objects.get(user_id=id)
+def customer_profile(request):
+    profile_id = request.user
+    data = Customer.objects.get(user= profile_id)
     return render(request, 'customer/profile.html', {'user': data})
 
 

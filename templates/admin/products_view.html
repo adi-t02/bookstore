@@ -1,4 +1,4 @@
-{% extends 'seller/seler_base.html' %}
+{% extends 'admin/admin_base.html' %}
 {%load crispy_forms_tags %}
 {% block content %}
 <table class="table table-hover">
@@ -12,8 +12,6 @@
       <th scope="col">description</th>
       <th scope="col">stock</th>
       <th scope="col">price</th>
-      <th scope="col">update</th>
-      <th scope="col"></th>
 
 
     </tr>
@@ -29,8 +27,6 @@
       <td>{{ book.description }}</td>
       <td>{{ book.stock }}</td>
       <td>{{ book.price }}</td>
-      <td><a href="" class="btn btn-secondary">update</a> </td>
-      <td><a href="" class="btn btn-danger">delete</a> </td>
     </tr>
   {% endfor %}
   </tbody>
