@@ -1,0 +1,14 @@
+{% extends 'seller/seler_base.html' %}
+{%load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid mb-3">
+			<div class=" justify-content-center">
+                <form method="post" >
+					 {% csrf_token %}
+					{{ form }}
+
+                <button type="submit" class="btn btn-primary">ADD</button>
+            	</form>
+			</div>
+</div>
+{% endblock %}}

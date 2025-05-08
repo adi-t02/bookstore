@@ -1,6 +1,8 @@
 from django.shortcuts import redirect, render
 
 from bookstore_app.forms import LoginRegister, CustomerRegister
+from bookstore_app.models import Customer
+
 
 def customer_page(request):
     return render(request,"customer/customer_page.html")
@@ -27,3 +29,28 @@ def customer_add(request):
 
 
 
+def customer_list(request):
+    data = Customer.objects.all
+    return render(request,'customer/customer_view.html',{'data':data})
+
+
+def customer_delete(request,id):
+    data =Customer.objects.get(id=id)
+    data.delete()
+    return redirect('customer_list')
+
+
+def customer_profile(request,id):
+    data = Customer.objects.get(user_id=id)
+    return render(request, 'customer/profile.html', {'user': data})
+
+
+def customer_update(request,id):
+    data = Customer.objects.get(id=id)
+    customer_form = CustomerRegister(instance=data)
+    if request.method == 'POST':
+        form1 = CustomerRegister(request.POST, instance=data)
+        if form1.is_valid():
+            form1.save()
+            return redirect('/')
+    return render(request,"customer/update.html",{'form':customer_form})

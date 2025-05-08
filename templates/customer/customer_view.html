@@ -9,17 +9,21 @@
       <th scope="col">email</th>
       <th scope="col">phone</th>
       <th scope="col">address</th>
+      <th scope="col">Delete</th>
+
 
     </tr>
   </thead>
   <tbody>
-  {% for seller in data %}
+  {% for customer in data %}
     <tr>
       <th scope="row">{{ forloop.counter }}</th>
-      <td>{{ seller.name }}</td>
-      <td>{{ seller.email }}</td>
-      <td>{{ seller.phone }}</td>
-      <td>{{ seller.address }}</td>
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.email }}</td>
+      <td>{{ customer.phone }}</td>
+      <td>{{ customer.address }}</td>
+      <td><a class="btn btn-primary" href="{% url 'customer_delete' customer.id %}" role="button">Delete</a></td>
+
     </tr>
   {% endfor %}
   </tbody>

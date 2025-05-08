@@ -1,0 +1,31 @@
+{% extends 'seller/seler_base.html' %}
+{%load crispy_forms_tags %}
+{% block content %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">category</th>
+      <th scope="col">description</th>
+      <th scope="col">stock</th>
+      <th scope="col">price</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for book in data %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ book.name }}</td>
+      <td>{{ book.category }}</td>
+      <td>{{ book.description }}</td>
+      <td>{{ book.stock }}</td>
+      <td>{{ book.price }}</td>
+
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

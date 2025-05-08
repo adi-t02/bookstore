@@ -6,14 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="dbf91b6c-51b0-4692-ab64-12ca3d0dbb00" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookstore_app/customer_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/customer_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore_app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookstore_app/seller_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/seller_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookstore_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/seller_view.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/seller/seler_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/seller/seler_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/seller/seller_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/seller/seller_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +52,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/Adi/PycharmProjects/bookstore/templates/admin&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/Adi/PycharmProjects/bookstore/templates/seller&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/templates/seller" />
+      <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/templates/tem" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/bookstore_app" />
@@ -77,5 +80,16 @@
       <updated>1745650729238</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

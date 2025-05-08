@@ -50,7 +50,7 @@
 					<div class="col-md-6">
 						<div class="right-element">
 							{% if request.user.is_authenticated %}
-							<a href=" " class="user-account for-buy "><i  class="icon icon-user"></i><span>{{ request.user }}</span></a>
+							<a href=" {% url 'customer_profile' request.user.id %} " class="user-account for-buy "><i  class="icon icon-user"></i><span>{{ request.user }}</span></a>
 							<a href="#" class="cart for-buy"><i class="icon icon-clipboard"></i><span>Cart:(0
 									$)</span></a>
 							<a href="{% url 'logout' %}" class="cart for-buy"><i class="icon icon-clipboard"></i><span>Logout</span></a>
