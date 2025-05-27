@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dbf91b6c-51b0-4692-ab64-12ca3d0dbb00" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookstore_app/admin_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/admin_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookstore_app/customer_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/customer_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookstore_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/forms.py" afterDir="false" />
@@ -16,15 +15,9 @@
       <change beforePath="$PROJECT_DIR$/bookstore_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/admin_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin_base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customer/registor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customer/registor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customer/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customer/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/seller/add_products.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/seller/add_products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/seller/product_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/seller/product_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/seller/registor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/seller/registor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/seller/seler_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/seller/seler_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/seller/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/seller/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

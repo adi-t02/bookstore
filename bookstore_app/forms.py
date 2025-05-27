@@ -32,3 +32,5 @@ class ProductsForms(forms.ModelForm):
     class Meta:
         model = Products
         fields = ('name','cover','category','author','description','stock','price')
+
+

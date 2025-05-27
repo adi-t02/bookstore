@@ -1,6 +1,15 @@
 {% extends 'seller/seler_base.html' %}
 {%load crispy_forms_tags %}
 {% block content %}
+    <div class="main-nav-start">
+      <form method="get">
+        <div class="search-wrapper d-flex">
+          <i data-feather="search" aria-hidden="true"></i>
+          {{ filter_products.form}}
+          <button type="submit" class=" btn btn-primary">search</button>
+        </div>
+      </form>
+    </div>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -21,8 +30,8 @@
   <tbody>
   {% for book in data %}
     <tr>
-      <th scoe="row">{{ forloop.counter }}</th>
-      <th><img width="150px" height="200px" src="{{ book.cover.url }}"></th>
+      <th scope="row">{{ forloop.counter }}</th>
+      <th><img width="300px" height="100px" src="{{ book.cover.url }}"></th>
       <td>{{ book.name }}</td>
       <td>{{ book.author }}</td>
       <td>{{ book.category }}</td>

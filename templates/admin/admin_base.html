@@ -41,127 +41,89 @@
         <div class="sidebar-body">
             <ul class="sidebar-body-menu">
                 <li>
-                    <a href=" {% static '/' %} "><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                    <a href=" {% url 'admin_page' %} "><span class="icon home" aria-hidden="true"></span>Dashboard</a>
                 </li>
                 <li>
                     <a  href=" {% url 'products_admin' %} "><span class="icon home" aria-hidden="true"></span>products</a>
                 </li>
+
+
                 <li>
-                    <a class="show-cat-btn" href=" {% static '##' %} ">
-                        <span class="icon document" aria-hidden="true"></span>Posts
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
+                    <a href=" {% url 'sold_page' %}  ">
+                        <span class="icon message" aria-hidden="true"></span>
+                        sold
                     </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href=" {% static 'posts.html' %} ">All Posts</a>
-                        </li>
-                        <li>
-                            <a href=" {% static 'new-post.html' %} ">Add new post</a>
-                        </li>
-                    </ul>
+<!--                    <span class="msg-counter">7</span>-->
                 </li>
-                <li>
-                    <a class="show-cat-btn" href=" {% static '##' %} ">
-                        <span class="icon folder" aria-hidden="true"></span>Categories
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href=" {% static 'categories.html' %} ">All categories</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href=" {% static '##' %} ">
-                        <span class="icon image" aria-hidden="true"></span>Media
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href=" {% static 'media-01.html' %} ">Media-01</a>
-                        </li>
-                        <li>
-                            <a href=" {% static 'media-02.html' %} ">Media-02</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href=" {% static '##' %} ">
-                        <span class="icon paper" aria-hidden="true"></span>Pages
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href=" {% static 'pages.html' %} ">All pages</a>
-                        </li>
-                        <li>
-                            <a href=" {% static 'new-page.html' %} ">Add new page</a>
-                        </li>
-                    </ul>
-                </li>
+
+<!--                <li>-->
+<!--                    <a class="show-cat-btn" href=" {% static '##' %} ">-->
+<!--                        <span class="icon paper" aria-hidden="true"></span>Pages-->
+<!--                        <span class="category__btn transparent-btn" title="Open list">-->
+<!--                            <span class="sr-only">Open list</span>-->
+<!--                            <span class="icon arrow-down" aria-hidden="true"></span>-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                    <ul class="cat-sub-menu">-->
+<!--                        <li>-->
+<!--                            <a href=" {% static 'pages.html' %} ">All pages</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href=" {% static 'new-page.html' %} ">Add new page</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
                 <li>
                     <a href=" {% static 'comments.html' %} ">
                         <span class="icon message" aria-hidden="true"></span>
                         Comments
                     </a>
-                    <span class="msg-counter">7</span>
+<!--                    <span class="msg-counter">7</span>-->
                 </li>
             </ul>
-            <span class="system-menu__title">system</span>
-            <ul class="sidebar-body-menu">
-                <li>
-                    <a href=" {% static 'appearance.html' %} "><span class="icon edit" aria-hidden="true"></span>Appearance</a>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href=" {% static '##' %} ">
-                        <span class="icon category" aria-hidden="true"></span>Extentions
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href=" {% static 'extention-01.html' %} ">Extentions-01</a>
-                        </li>
-                        <li>
-                            <a href=" {% static 'extention-02.html' %} ">Extentions-02</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href=" {% static '##' %} ">
-                        <span class="icon user-3" aria-hidden="true"></span>Users
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href=" {% static 'users-01.html' %} ">Users-01</a>
-                        </li>
-                        <li>
-                            <a href=" {% static 'users-02.html' %} ">Users-02</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href=" {% static '##' %} "><span class="icon setting" aria-hidden="true"></span>Settings</a>
-                </li>
-            </ul>
+<!--            <span class="system-menu__title">system</span>-->
+<!--            <ul class="sidebar-body-menu">-->
+<!--                <li>-->
+<!--                    <a href=" {% static 'appearance.html' %} "><span class="icon edit" aria-hidden="true"></span>Appearance</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a class="show-cat-btn" href=" {% static '##' %} ">-->
+<!--                        <span class="icon category" aria-hidden="true"></span>Extentions-->
+<!--                        <span class="category__btn transparent-btn" title="Open list">-->
+<!--                            <span class="sr-only">Open list</span>-->
+<!--                            <span class="icon arrow-down" aria-hidden="true"></span>-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                    <ul class="cat-sub-menu">-->
+<!--                        <li>-->
+<!--                            <a href=" {% static 'extention-01.html' %} ">Extentions-01</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href=" {% static 'extention-02.html' %} ">Extentions-02</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a class="show-cat-btn" href=" {% static '##' %} ">-->
+<!--                        <span class="icon user-3" aria-hidden="true"></span>Users-->
+<!--                        <span class="category__btn transparent-btn" title="Open list">-->
+<!--                            <span class="sr-only">Open list</span>-->
+<!--                            <span class="icon arrow-down" aria-hidden="true"></span>-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                    <ul class="cat-sub-menu">-->
+<!--                        <li>-->
+<!--                            <a href=" {% static 'users-01.html' %} ">Users-01</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href=" {% static 'users-02.html' %} ">Users-02</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href=" {% static '##' %} "><span class="icon setting" aria-hidden="true"></span>Settings</a>-->
+<!--                </li>-->
+<!--            </ul>-->
         </div>
     </div>
 </aside>

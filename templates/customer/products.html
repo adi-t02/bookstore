@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{%load crispy_forms_tags %}
+{% block content %}
+  <style>
+    .color-option {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px #ccc;
+      cursor: pointer;
+    }
+    .color-option.selected {
+      box-shadow: 0 0 0 2px #007bff;
+    }
+    .thumbnail-img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .product-image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+  </style>
+
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- Images -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <img src=" {{ item.cover.url }} " class="img-fluid product-image " alt="Backpack">
+      </div>
+<!--      <div class="d-flex gap-2">-->
+<!--        <img src="https://via.placeholder.com/100x100.png?text=1" class="thumbnail-img rounded" alt="Thumb 1">-->
+<!--        <img src="https://via.placeholder.com/100x100.png?text=2" class="thumbnail-img rounded" alt="Thumb 2">-->
+<!--        <img src="https://via.placeholder.com/100x100.png?text=3" class="thumbnail-img rounded" alt="Thumb 3">-->
+<!--      </div>-->
+    </div>
+
+    <!-- Product Details -->
+    <div class="col-md-6">
+      <span class="text-warning fw-bold">New</span>
+      <h3 class="mt-2">{{ item.name }}</h3>
+      <p class="fs-4 text-danger fw-bold mb-0">{{ item.price }}$</p>
+
+      <div class="bg-light p-3 rounded my-3">
+        <p class="mb-1">{{ item.description }}</p>
+<!--        <p class="mb-0">Applies to orders over €100.00 EUR.</p>-->
+<!--        <a href="#" class="text-primary">Learn more</a>-->
+      </div>
+
+      <!-- Rating -->
+      <div class="mb-3">
+        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="ms-2">5</span>
+      </div>
+
+      <!-- Colors -->
+<!--      <div class="mb-3">-->
+<!--        <p class="mb-1"><strong>Color:</strong> Navy</p>-->
+<!--        <span class="color-option" style="background-color: #2c3e50;"></span>-->
+<!--        <span class="color-option" style="background-color: #e67e22;"></span>-->
+<!--        <span class="color-option" style="background-color: #8e44ad;"></span>-->
+<!--      </div>-->
+
+      <!-- quantity -->
+      <form method="post">
+        {% csrf_token %}
+      <div class="mb-3">
+        <label for="quantity" class="form-label"><strong>Quantity</strong></label>
+        <input id="quantity" name="quantity" type="number" value="1" class="form_control">
+        <label for="cardnumber" class="form-label"><strong>Card number</strong></label>
+        <input id="cardnumber" name="quantity" type="number" class="form_control">
+        <div class="d-flex">
+          <div><label for="cvv" class="form-label"><strong>cvv</strong></label>
+        <input id="cvv" name="quantity" type="number" placeholder="cvv" class="form_control"></div>
+          <div>
+            <label for="expiry" class="form-label"><strong>expiry</strong></label>
+        <input id="expiry" name="quantity" placeholder="eg:mm/yy" type="text"  class="form_control">
+          </div>
+        </div>
+      </div>
+
+
+<!--        messages-->
+        {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                {{message}}
+                </div>
+                {% endfor %}
+      <!-- Buy Button -->
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-lg">BUY NOW</button>
+      </div>
+      </form>
+    </div>
+  </div>
+  <div class="container mt-5">
+
+    <h2>All Reviews</h2>
+    <div class="list-group">
+        {% for review in reviews %}
+            <div class="list-group-item">
+                <h5 class="mb-1">{{ review.buyer.name }}</h5>
+                <p class="mb-1">{{ review.review }}</p>
+                <small class="text-muted">{{ review.date }}</small>
+            </div>
+        {% empty %}
+            <p>No reviews yet.</p>
+        {% endfor %}
+    </div>
+</div>
+</div>
+
+
+
+<!--<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>-->
+
+<!--<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">-->
+<!--  <div class="offcanvas-header">-->
+<!--    <h5 id="offcanvasRightLabel">Offcanvas right</h5>-->
+<!--    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+<!--  </div>-->
+<!--  <div class="offcanvas-body">-->
+<!--    ...-->
+<!--  </div>-->
+<!--</div>-->
+
+</body>
+</html>
+
+
+{% endblock %}

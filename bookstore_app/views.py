@@ -2,13 +2,21 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 
-from bookstore_app.models import Products
+from bookstore_app.filters import ProductsFilters
+from bookstore_app.models import Products, Customer, Cart
 
 
 # Create your views here.
 def home(request):
-    data = Products.objects.all
-    return render(request,"home/home.html",{'books':data })
+    books= Products.objects.all()
+    filter_books = ProductsFilters(request.GET, queryset=books)
+    books = filter_books.qs
+
+    context={
+        'bookss':books,
+        'filter_books':filter_books
+    }
+    return render(request,"home/home.html",context)
 
 
 def Login(request):

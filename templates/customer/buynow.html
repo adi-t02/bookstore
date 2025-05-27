@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%load crispy_forms_tags %}
+{% block content %}
+
+<form method="post">
+        {% csrf_token %}
+      <div class="mb-3">
+        <label for="quantity" class="form-label"><strong>Quantity</strong></label>
+        <input id="quantity" name="quantity" type="number" min="1" value="1" required class="form_control">
+        <label for="cardnumber" class="form-label"><strong>Card number</strong></label>
+        <input id="cardnumber" name="cardnumber"  class="form_control">
+          <div><label for="cvv" class="form-label"><strong>cvv</strong></label>
+        <input id="cvv" name="cvv"  placeholder="cvv" class="form_control"></div>
+            <label for="expiry" class="form-label"><strong>expiry</strong></label>
+        <input id="expiry" name="expiry" placeholder="eg:mm/yy" type="text"  class="form_control">
+          </div>
+        </div>
+      </div>
+
+
+<!--        messages-->
+        {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                {{message}}
+                </div>
+                {% endfor %}
+      <!-- Buy Button -->
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-lg">BUY NOW</button>
+      </div>
+      </form>
+{% endblock %}

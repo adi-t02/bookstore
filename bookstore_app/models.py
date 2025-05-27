@@ -40,8 +40,27 @@ class Products(models.Model):
     cover = models.ImageField(upload_to='bookcovers/')
     category = models.CharField(max_length=20, choices=STATUS_CHOICES, default='others')
     author = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
+    description = models.CharField(max_length=1000)
     seller = models.ForeignKey(Seller,on_delete=models.CASCADE)
-    stock = models.CharField(max_length=5)
+    stock = models.IntegerField()
     price = models.CharField(max_length=10)
 
+class Cart(models.Model):
+    product =  models.ForeignKey(Products,on_delete=models.CASCADE)
+    buyer = models.ForeignKey(Customer,on_delete=models.CASCADE)
+    date = models.DateField(auto_now_add=True)
+    quantity = models.IntegerField()
+
+class Sold(models.Model):
+    product =  models.ForeignKey(Products,on_delete=models.CASCADE)
+    buyer = models.ForeignKey(Customer,on_delete=models.CASCADE)
+    date = models.DateField(auto_now_add=True)
+    quantity = models.IntegerField()
+
+
+class Review(models.Model):
+    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    buyer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    review = models.CharField(max_length=200)
+    date = models.DateField(auto_now_add=True)
+    time = models.TimeField(auto_now_add=True)
